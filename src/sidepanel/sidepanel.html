@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AISidebar</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+
+<body>
+  <div id="chat-container">
+    <div class="chat-header">
+      <h1>AISider</h1>
+      <!-- 设置按钮将通过JavaScript动态添加到这里 -->
+    </div>
+
+    <div id="chat-messages">
+      <!-- Mock messages -->
+      <div class="message-container received">
+        <div class="message received">Hello! How can I help you today?</div>
+      </div>
+      <div class="message-container sent">
+        <div class="message sent">I need some information about your services.</div>
+      </div>
+      <!-- Messages will be dynamically added here -->
+    </div>
+
+    <div id="chat-input">
+      <textarea id="message-input" placeholder="Type a message..."></textarea>
+      <div class="button-container">
+        <button id="send-button" class="action-button">发送</button>
+        <button id="stop-button" class="action-button" style="display: none;">停止</button>
+      </div>
+    </div>
+  </div>
+  <script src="sidepanel.js" type="module"></script>
+</body>
+
+</html>
