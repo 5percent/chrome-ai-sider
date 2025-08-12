@@ -27,5 +27,17 @@
     "page": "options/options.html",
     "open_in_tab": false
   },
-  "icons": {}
+  "icons": {},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["tools/pmsApprove.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
