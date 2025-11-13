@@ -36,7 +36,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["tools/pmsApprove.js"],
+      "resources": ["tools/pmsApprove.js", "tools/pmsApproval.js"],
       "matches": ["<all_urls>"]
     }
   ]

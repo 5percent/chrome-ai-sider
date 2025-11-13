@@ -8,5 +8,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     import(chrome.runtime.getURL("tools/pmsApprove.js")).then((module) => {
       module.default();
     });
+  } else if (request.action === "runPmsApproval") {
+    import(chrome.runtime.getURL("tools/pmsApproval.js")).then((module) => {
+      module.default();
+    });
   }
 });

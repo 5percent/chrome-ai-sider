@@ -373,4 +373,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // PMS审批按钮事件
+  const toolbarBtn2 = document.getElementById("toolbar-btn2");
+  if (toolbarBtn2) {
+    toolbarBtn2.addEventListener("click", async () => {
+      // 获取当前激活标签页
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (tabs[0]?.id) {
+          chrome.tabs.sendMessage(tabs[0].id, { action: "runPmsApproval" });
+        }
+      });
+    });
+  }
 });
